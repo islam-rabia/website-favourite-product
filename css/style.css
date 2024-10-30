@@ -238,6 +238,7 @@ body {
 
             .sign-out {
               display: flex;
+              cursor: pointer;
 
               ion-icon {
                 font-size: 19px;
