@@ -1,0 +1,195 @@
+body {
+  .container {
+    display: block;
+
+    header {
+      .header {
+        flex-direction: column;
+        gap: 13px;
+        padding-inline: 70px;
+        justify-content: space-between;
+        align-items: center;
+        display: flex;
+
+        .person {
+          display: flex;
+          gap: 20px;
+
+          .signIn,
+          .signUp {
+            .icon-person {
+              display: flex;
+              gap: 5px;
+              align-items: center;
+              border-radius: 50px;
+              background-color: transparent;
+              color: white;
+              border: hidden;
+              cursor: pointer;
+
+              ion-icon {
+                font-size: 15px;
+                color: #3f51b5;
+              }
+
+              p {
+                font-size: 13px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    section {
+      display: flex;
+      justify-content: center;
+      margin-block: 150px;
+      padding-inline: 20px;
+
+      form {
+        padding-block: 20px;
+        padding-inline: 20px;
+        background-color: #ffffff1c;
+        border-radius: 20px;
+        width: 100%;
+
+        h3 {
+          font-size: 20px;
+          font-family: sans-serif;
+          font-weight: 500;
+          color: white;
+          margin-bottom: 20px;
+          text-align: center;
+        }
+
+        .form-div {
+          display: flex;
+          flex-direction: column;
+          gap: 18px;
+
+          .user,
+          .email,
+          .password {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+
+            label {
+              font-size: 14px;
+              font-weight: 100;
+              font-family: system-ui;
+              color: white;
+            }
+
+            input {
+              background: transparent;
+              border: 1px solid #898989;
+              padding-block: 7px;
+              padding-inline: 10px;
+              border-radius: 5px;
+              color: white;
+
+              &:focus {
+                border: 1px solid #a3a3a3;
+                outline: none;
+              }
+            }
+
+            p {
+              font-size: 11px;
+              color: white;
+              font-family: system-ui;
+              display: none;
+              padding-left: 5px;
+            }
+          }
+
+          .password {
+            position: relative;
+
+            .pass-div {
+              display: flex;
+              flex-direction: column;
+              gap: 6px;
+            }
+
+            .icons {
+              position: absolute;
+              top: 57%;
+              transform: translateY(-50%);
+              right: 25px;
+
+              ion-icon {
+                color: #d2d2d2;
+                cursor: pointer;
+
+                &:first-child {
+                  position: absolute;
+
+                  &.hidden {
+                    display: none;
+                  }
+                }
+
+                &:last-child {
+                  position: absolute;
+                  display: none;
+
+                  &.show {
+                    display: block;
+                  }
+                }
+              }
+            }
+          }
+
+          .submit {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+
+            input {
+              border: hidden;
+              background-color: #3f51b5;
+              padding-block: 10px;
+              padding-inline: 20px;
+              border-radius: 10px;
+              color: white;
+              cursor: pointer;
+              transition: transform ease 0.4s;
+
+              &:active {
+                transform: scale(0.96);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 375px) {
+  body {
+    .container {
+      section {
+        form {
+          max-width: 320px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 640px) {
+  body {
+    .container {
+      header {
+        .header {
+          flex-direction: row;
+        }
+      }
+    }
+  }
+}
