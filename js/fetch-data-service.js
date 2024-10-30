@@ -28,7 +28,7 @@ function generateService(data) {
       <li id="${id}">
         <div class="product_icon" data-ion="${index}">
           <ion-icon name="heart-outline"></ion-icon>
-          <img src="../image/heart.png" alt="image icon" />
+          <img src="image/heart.png" alt="image icon" />
         </div>
         <div class="product-title">
           <img src="${image}" alt="image product">
