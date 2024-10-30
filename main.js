@@ -13,10 +13,12 @@ myFuncData();
 function getLocalStorage() {
   let person = document.querySelector(".person");
   let headerProduct = document.querySelector(".header-btn");
+  let account = document.querySelector(".header-btn p ");
   let userName = JSON.parse(localStorage.getItem("userName"));
 
   if (userName) {
     headerProduct.classList.add("active");
+    account.innerHTML = `Welcome, ${userName}`;
     person.remove();
   }
 }
