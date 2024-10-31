@@ -542,6 +542,7 @@ body {
               height: 100%;
               max-width: 265px;
               border-radius: 10px;
+              object-fit: cover;
             }
 
             .img-card4,
@@ -551,6 +552,7 @@ body {
               max-height: 32vh;
               max-width: 265px;
               border-radius: 10px;
+              object-fit: cover;
             }
 
             .img-card5 {
@@ -559,6 +561,7 @@ body {
               height: 100%;
               max-width: 265px;
               border-radius: 10px;
+              object-fit: cover;
             }
 
             .card-title {
