@@ -20,7 +20,7 @@ function generateDataFunc() {
 
       return `
       <li id="${id}" >
-        <div class="product_icon close" data-ion="${index}">
+        <div class="product_icon close">
           <ion-icon name="close-outline" class="icon-close"></ion-icon>
         </div>
         <div class="product-title">
@@ -33,13 +33,12 @@ function generateDataFunc() {
     })
     .join("");
 
-  app.addEventListener("click", (event) => {
-    let indexDiv = event.target.closest(".product_icon");
+  let iconClose = document.querySelectorAll(".product_icon");
 
-    if (indexDiv) {
-      let index = indexDiv.dataset.ion;
+  iconClose.forEach((icon, index) => {
+    icon.addEventListener("click", () => {
       remove_from_localStorage(index);
-    }
+    });
   });
 }
 
